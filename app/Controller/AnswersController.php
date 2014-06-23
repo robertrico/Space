@@ -3,6 +3,9 @@
 	
 
 	class AnswersController extends AppController {
+	/*
+	* Include Scripts for use with Cakephp
+	*/
 		public $helpers = array('Js' => array('Jquery'));
 		
 		//public function beforeFilter() {

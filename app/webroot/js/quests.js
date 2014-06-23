@@ -1,15 +1,18 @@
 function quest(answ){
+// Sets answer variables and the validation for correct answers
 	var ans = answ
 	var x = prompt("What is this body called?","Enter your answer")
 	while (x !=null && x != ans){
 		x = prompt("Please try again.","Enter your answer")
 	}
+// Runs the fact function when answer is correct
 	if (x == ans){
 		fact(answ);
 	}
 	
 	 
 }
+// Depending on the planet. Runs through the congratulations prompt and fills in the <div> in the space.ctp view
 function fact(planet){
 	var did = "Good Job! Did you know,";
 	var one = "<center>"

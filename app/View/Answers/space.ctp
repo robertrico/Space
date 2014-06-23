@@ -21,6 +21,7 @@
 		<h3>Name that Celestial Body</h3>
 		<div id="img">
 		<table class="subtitle">
+		<!-- First List of Planets-->
 				<tr id="planet" >
 					<td onclick="quest('Sun')";><div id="name"></div><?php echo $this->Html->image("planets/sun.png");?><div id="fact"></div></td>
 					<td onclick="quest('Mercury')";><div id="name2"></div><?php echo $this->Html->image("planets/mercury.png");?><div id="fact2"></div></td>
@@ -30,6 +31,7 @@
 					
 				</tr>
 			</table>
+		<!-- Asteroid Belt Spanning the table-->
 			<table class="subtitle">
 				<tr>
 					<center>
@@ -39,6 +41,7 @@
 					</center>
 				</tr>
 			</table>
+		<!-- Second set of planets-->
 			<table class="subtitle">
 				<tr id="planet">
 					<td onclick="quest('Jupiter')";><div id="name7"></div><?php echo $this->Html->image("planets/jupiter.png");?><div id="fact7"></div></td>
