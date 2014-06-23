@@ -1,6 +1,9 @@
 <html>
 <body>
 <header>
+	<?php   echo $this->Html->script('jquery');?>
+	
+	
 	<script language="javascript" type ="text/javascript">
 			function sunPop(){
 				sun = "The Sun is hot"
@@ -48,6 +51,12 @@
 			else if(planet == "Neptune"){
 				return "Only ONE spacecraft has ever flown past Neptune!"
 			}
+			else if(planet == "Pluto"){
+				return "Pluto isn't really a planet, it is called a dwarf planet!"
+			}
+			else if(planet == "Comet"){
+				return "Comet!"
+			}
 			}
 	</script>
 </header>
@@ -56,13 +65,17 @@
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
-		$path = WWW_ROOT;
 		?>
-<?php ob_start(); ?>
+
 <h2><center>Our Solar System</center></h2>
 <div>
 	<center class="subtitle">Just a small fragment of the Milky Way</center>
 		<h3>Name that Celestial Body</h3>
+		<div id="popupContact">
+			
+		</div>
+		<div>
+		</div>
 		<div id="img">
 			<a><img src='img/planets/sun.png' onclick="quest('Sun');"></a>
 			<a><img src='img/planets/mercury.png' onclick="quest('Mercury');"></a>
@@ -72,15 +85,29 @@
 			<a><img src='img/planets/belt.png' onclick="quest('Asteroid Belt');"></a>
 		</div>
 		<div id="img">
-		<img src='img/planets/jupiter.png' onclick="quest('Jupiter');"></a>
-		<img src='img/planets/saturn.png' onclick="quest('Saturn');"></a>
-		<img src='img/planets/uranus.png' onclick="quest('Uranus');"></a>
-		<img src='img/planets/neptune.png' onclick="quest('Neptune');"></a>
-			
+			<img src='img/planets/jupiter.png' onclick="quest('Jupiter');"></a>
+			<img src='img/planets/saturn.png' onclick="quest('Saturn');"></a>
+			<img src='img/planets/uranus.png' onclick="quest('Uranus');"></a>
+			<img src='img/planets/neptune.png' onclick="quest('Neptune');"></a>
+			<img src='img/planets/pluto.png' onclick="quest('Pluto');"></a>
+			<img src='img/planets/comet.png' onclick="quest('Comet');"></a>
+			<?php // echo $this->Js->get('#img')->event('click', $quest); ?>
+			<div id="img"><?php //echo $this->Html->image("planets/saturn.png", array("alt" => "Animal Health")); ?></div>
+		
 		</div>
+		<?php
+			echo $this->Js->link('Sun.png', array('hello'), array('update'=>'#success'));
+		?>
+
+		<div id="success"></div>
 		
 		
+
+
+		
+<?php echo $this->Js->writeBuffer(); // Write cached scripts ?>		
 </div>
+
 </body>
 </html>
 
