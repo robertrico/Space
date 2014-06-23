@@ -1,9 +1,10 @@
 <html>
 <header>
+	<?php echo $this->Html->css('space.css'); ?>
 	<?php echo $this->Html->script('jquery'); ?>
 	<?php echo $this->Html->script('quests'); ?>
 	<?php
-		echo $this->Html->css('cake.generic');
+		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
