@@ -3,6 +3,8 @@
 	<?php echo $this->Html->css('space.css'); ?>
 	<?php echo $this->Html->script('jquery'); ?>
 	<?php echo $this->Html->script('quests'); ?>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<?php echo $this->Html->script('jquery.paulund_modal.js'); ?>
 	<?php
 		
 		echo $this->fetch('meta');
@@ -10,11 +12,17 @@
 		echo $this->fetch('script');
 		$path = WWW_ROOT;
 		?>
+		<script>
+$(document).ready(function(){
+	$('.paulund_modal').paulund_modal_box();
+});
+</script>
 	
 	
 </header>
 <body style ="background: backdrop.jpg">
 
+<a href="#" class="paulund_modal">Modal Test</a>
 <h2><center>Our Solar System</center></h2>
 <div>
 	<center class="subtitle">Just a small fragment of the Milky Way</center>
@@ -53,6 +61,8 @@
 			</table>
 		</div>
 </div>
+
+<?php echo $this->Js->writeBuffer(); ?>
 </body>
 </html>
 
