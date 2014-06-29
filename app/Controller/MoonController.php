@@ -2,7 +2,7 @@
 	App::uses('AppController', 'Controller');
 	
 
-	class AnswersController extends AppController {
+	class MoonController extends AppController {
 	/*
 	* Include Scripts for use with Cakephp
 	*/
@@ -12,6 +12,9 @@
 		//	parent::beforeFilter();
 		//	$this->Auth->allow('space', 'view');
 		//}
+		public function index(){
+			
+		}
 		public function space(){
 			
 		}
